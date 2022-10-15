@@ -1,0 +1,13 @@
+$gray-600: #ededed;
+$green: #02d44f;
+
+.placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1;
+}
+
+.box {
+    min-height: 50px;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

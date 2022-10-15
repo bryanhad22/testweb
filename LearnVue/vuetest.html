@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Vue</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <style>
+        .box {
+            width: 400px;
+            padding: 100px;
+            text-align: center;
+            margin: 40px;
+            background-color: coral;
+            display: inline-block;
+        }
+
+        img {
+            height: 300px;
+        }
+
+        li {
+            margin: 0 40px;
+        }
+
+        
+
+        .fav {
+        }
+    </style>
+</head>
+<body style="margin: 1rem; background-color: antiquewhite;">
+    <h1>Hello World! :)</h1>
+
+    <div id="app">
+        <div v-if="showBooks">
+            <ul style="display: flex;">
+                <li v-for="book in books" :class="{fav: book.isFave}">
+                    <h3>{{book.title}} - {{book.author}} - {{book.age}}</h3>
+                    <img :src="book.img" :alt="book.title">
+                </li>
+            </ul>
+            <button @click="age++">Increase age</button>
+            <button @click="age--">Decrease age</button>
+            <div>
+                <button @click="changeTitle('One Piece')">Change Title!</button>
+            </div>
+        </div>
+
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <span v-else="showBooks">Show Books</span>
+        </button>
+
+        <div v-show="showBooks">currently showing Books</div>
+
+        <div>
+            <div class="box" @mouseover="handleEvents($event, 5)">Mouse Over</div>
+            <div class="box" @mouseleave="handleEvents">Mouse Leave</div>
+            <div class="box" @dblclick="handleEvents">Double Click</div>
+            <div class="box" @mousemove="handleMousemove">Mouse Position - ({{x}}) - ({{y}})</div>
+        </div> 
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

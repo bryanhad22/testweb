@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="scripts/main.css">
+    <title>KSP Indosurya (dalam Pailit)</title>
+</head>
+<body class="bg-secondary">
+    <!-- nav start -->
+    <nav class="navbar navbar-expand-lg bg-light shadow p-3 mb-4 bg-white rounded">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">KSP Indosurya (dalam Pailit)</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              
+                <-- Aslinya Droppdown disini! -->
+
+              <!--<li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul> -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!-- nav end -->
+
+    <!-- Hero start -->
+    <div class="container border border-2 rounded bg-white mb-5 pb-5">
+        <!-- Header start -->
+        <div class="row">
+            <div class="col border-bottom bg-secondary pt-3">
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Dashboard</a></li>
+                      <li class="breadcrumb-item active text-dark" aria-current="page">Input Tagihan Kreditor Baru</li>
+                    </ol>
+                  </nav>
+            </div>
+        </div>
+        <!-- Header end -->
+
+        <!-- body start -->
+            <!-- Nama Kreditor -->
+            <div class="row mt-4">
+                <div class="col-4 text-end">
+                    <label for="nama" class="form-label">Nama Kreditor</label>
+                </div>
+                <div class="col-6">
+                    <input type="text" class="form-control" id="nama" aria-describedby="name-desc">
+                    <div id="name-desc" class="form-text text-dark text-end">We'll never share your name with anyone else.</div>
+                </div>
+                <div class="col"></div>
+            </div>
+            <!-- Alamat Kreditor -->
+            <div class="row mt-4">
+                <div class="col-4 text-end">
+                    <label for="alamatKreditor" class="form-label">Alamat Kreditor</label>
+                </div>
+                <div class="col-6">
+                    <textarea class="form-control" id="alamatKreditor" rows="4"></textarea>
+                </div>
+                <div class="col"></div>
+            </div>
+            <!-- Alamat Korespondensi -->
+            <div class="row mt-4">
+                <div class="col-4 text-end">
+                    <label for="alamatKorespondensi" class="form-label">Alamat Korespondensi</label>
+                </div>
+                <div class="col-6">
+                    <textarea class="form-control" id="alamatKorespondensi" rows="4"></textarea>
+                </div>
+                <div class="col"></div>
+            </div>
+            <!-- Kuasa/Kuasa Hukum -->
+            <div class="row mt-4">
+                <div class="col-4 text-end">
+                    <label for="kuasa" class="form-label">Kuasa/Kuasa Hukum</label>
+                </div>
+                <div class="col-6">
+                    <input type="text" class="form-control" id="kuasa">
+                </div>
+                <div class="col"></div>
+            </div>
+            <!-- Nomor Telepon/HP -->
+            <div class="row mt-4">
+                <div class="col-4 text-end">
+                    <label for="number" class="form-label">Nomor Telepon / HP</label>
+                </div>
+                <div class="col-6">
+                    <input type="text" class="form-control" id="noHP">
+                </div>
+                <div class="col"></div>
+            </div>
+            <!-- Email -->
+            <div class="row mt-4">
+                <div class="col-4 text-end">
+                    <label for="email" class="form-label">Email</label>
+                </div>
+                <div class="col-6">
+                    <input type="text" class="form-control" id="email">
+                </div>
+                <div class="col"></div>
+            </div>
+            <!-- Tipe Tagihan -->
+            <div class="row mt-4">
+                <div class="col-4 text-end">
+                    <label for="tipeTagihan" class="form-label">Tipe Tagihan</label>
+                </div>
+                <div class="col d-flex ">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioTipeTagihan" id="separatis">
+                        <label class="form-check-label" for="separatis">Separatis</label>
+                    </div>
+                    <div class="form-check ms-4">
+                        <input class="form-check-input" type="radio" name="radioTipeTagihan" id="preferen">
+                        <label class="form-check-label" for="preferen">Preferen</label>
+                    </div>
+                    <div class="form-check ms-4">
+                        <input class="form-check-input" type="radio" name="radioTipeTagihan" id="konkuren">
+                        <label class="form-check-label" for="konkuren">Konkuren</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Lampiran -->
+            <div class="row mt-4">
+                <div class="col-4 text-end">
+                    <h4>Lampiran</h4>
+   3             </div>
+                <div class="col"></div>
+            </div>
+            <!-- Surat Permohonan Tagihan -->
+            <div class="row mt-4">
+                <div class="col-4 text-end">
+                    <label class="form-check-label" for="suratPermohonanTagihan">Surat Permohonan Tagihan</label>
+                </div>
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="suratPermohonanTagihan">
+                      </div>
+                </div>
+                <div class="col-5">
+                    <input type="text" class="form-control" id="suratPermohonanTagihan" placeholder="Masukkan Keterangan (Cth: belum lengkap)">
+                </div>
+                <div class="col"></div>
+            </div>
+            <!-- Fotocopy KTP/Identitas -->
+            <div class="row mt-4">
+                <div class="col-4 text-end">
+                    <label class="form-check-label" for="fotocopyKTP">Fotocopy KTP/Identitas</label>
+                </div>
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="fotocopyKTP">
+                      </div>
+                </div>
+                <div class="col-5">
+                    <input type="text" class="form-control" id="fotocopyKTP" placeholder="Masukkan Keterangan (Cth: belum lengkap)">
+                </div>
+            </div>
+            <!-- Surat Kuasa (jika dikuasakan) -->
+            <div class="row mt-4">
+                <div class="col-4 text-end">
+                    <label class="form-check-label" for="suratKuasa">Surat Kuasa (jika dikuasakan)</label>
+                </div>
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="suratKuasa">
+                      </div>
+                </div>
+                <div class="col-5">
+                    <input type="text" class="form-control" id="suratKuasa" placeholder="Masukkan Keterangan (Cth: belum lengkap)">
+                </div>
+            </div>
+            <!-- Fotocopy KTP Penerima Kuasa -->
+            <div class="row mt-4">
+                <div class="col-4 text-end">
+                    <label class="form-check-label" for="fotocopyKTPKuasa">Fotocopy KTP Penerima Kuasa</label>
+                </div>
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="fotocopyKTPKuasa">
+                      </div>
+                </div>
+                <div class="col-5">
+                    <input type="text" class="form-control" id="fotocopyKTPKuasa" placeholder="Masukkan Keterangan (Cth: belum lengkap)">
+                </div>
+            </div>
+            <!-- Button! -->
+            <div class="row mt-4">
+                <div class="col-4 text-end">
+                    <button type="button" class="btn btn-success text-white">+ Tambah Dokumen</button>
+                </div>
+                <div class="col"></div>
+            </div>
+            <!-- SPAN -->
+            <span class="row box"></span>
+            <!-- Back and Save! -->
+            <div class="row">
+                <div class="col-4 text-end">
+                    <button type="button" class="btn btn-danger text-white" style="width: 6rem;">Back</button>
+                </div>
+                <div class="col-6 text-end">  
+                    <button type="button" class="btn btn-primary text-white" style="width: 6rem;">Save</button>
+                </div>
+        <!-- body end -->
+
+    </div>
+    <!-- Hero end -->
+
+    <!-- footer start -->
+    <!-- footer end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
